@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="app-container">
       <div className="greeting">
-        <Greeting name="Messoudi" />
+        <Greeting name="el marzouki" />
       </div>
       <div className="counter">
         <Counter />
