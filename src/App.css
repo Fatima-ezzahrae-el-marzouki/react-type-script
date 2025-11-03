@@ -1,0 +1,106 @@
+/* 🌈 Fond animé en dégradé dynamique */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Dégradé animé */
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #6dd5fa, #2980b9);
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease infinite;
+}
+
+/* ✨ Animation du fond */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 🧭 Conteneur principal */
+.app-container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px 60px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 1.2s ease;
+}
+
+/* 🌤 Animation d’apparition */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 🧑‍💻 Message de salutation */
+.greeting {
+  font-size: 2.3rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+/* 🔢 Zone du compteur */
+.counter {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 25px 35px;
+  border-radius: 16px;
+  display: inline-block;
+  animation: pulse 4s infinite ease-in-out;
+}
+
+/* 💓 Animation “pulse” du compteur */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+}
+
+/* 🧮 Nombre du compteur */
+.counter p {
+  font-size: 1.7rem;
+  margin: 0 0 20px;
+}
+
+/* 🔘 Bouton stylé */
+.counter button {
+  background: #fff;
+  color: #2980b9;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Effet au survol du bouton */
+.counter button:hover {
+  background: #2980b9;
+  color: #fff;
+  transform: scale(1.08);
+}
